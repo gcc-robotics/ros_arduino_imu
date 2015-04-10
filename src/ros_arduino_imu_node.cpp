@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 	ros::init(argc, argv, "ros_arduino_imu");
 	ros::NodeHandle node;
 
-	ros::Publisher imuPublisher = node.advertise<sensor_msgs::Imu>("/imu/data", 1);
+	ros::Publisher imuPublisher = node.advertise<sensor_msgs::Imu>("/imu", 1);
 
 	// port, baudrate, timeout in milliseconds
 	serial::Serial imuSerial("/dev/ttyACM0", 115200, serial::Timeout::simpleTimeout(1000));
