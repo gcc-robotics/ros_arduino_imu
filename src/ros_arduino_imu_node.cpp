@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 	ros::Publisher imuPublisher = node.advertise<sensor_msgs::Imu>("/imu", 1);
 
 	// port, baudrate, timeout in milliseconds
-	serial::Serial imuSerial("/dev/ttyACM0", 115200, serial::Timeout::simpleTimeout(1000));
+	serial::Serial imuSerial("/dev/ttyACM1", 115200, serial::Timeout::simpleTimeout(1000));
 
 	if(imuSerial.isOpen())
 	{
